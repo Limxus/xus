@@ -1,0 +1,85 @@
+
+@font-face {
+    font-family: 'RixYeoljeongdo_Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SEBANG_Gothic_Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SEBANG_Gothic_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    margin: 40px;
+    overflow: hidden;
+    font-family: 'SEBANG_Gothic_Regular';'
+}
+header{
+    padding-left: 20px;
+    border-bottom: solid gray 1px;
+    height: 50px;
+}
+a, a:visited{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    background-color: gray;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+a:active{
+    background-color: black;
+    color:  white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+nav{
+    list-style: none;
+    display: grid;
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    grid-template-columns: repeat(4, 100px) auto;
+}
+.wther{
+    justify-self: end;
+}
+p{
+    margin: 20px;
+}
+section{
+    margin: 20px;
+    width: auto;
+    height: 55vh;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 1px lightgray;
+    box-shadow: 0 0 8px 8px rgba(211,211,211,0.3);
+}
+section img{
+    display: block;
+    margin: auto;
+    width: auto;
+    height: 100%;
+    opacity: 0.5;
+}
+footer{
+    margin: 20px;
+}
