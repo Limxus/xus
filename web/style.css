@@ -21,7 +21,7 @@
 body{
     margin: 40px;
     overflow: hidden;
-    font-family: 'SEBANG_Gothic_Regular';'
+    font-family: 'SEBANG_Gothic_Regular';
 }
 header{
     padding-left: 20px;
@@ -56,10 +56,14 @@ nav{
     margin-bottom: 20px;
     margin-top: 20px;
     margin-right: 20px;
-    grid-template-columns: repeat(4, 100px) auto;
+    grid-template-columns: 100px 100px 100px 100px auto 100px 220px ;
+    box-shadow: 0 5px 8px -8px gray;
 }
-.wther{
-    justify-self: end;
+#time{
+    font-weight: bold;
+    font-size: x-large;
+    grid-column: 7;
+    justify-self: start;
 }
 p{
     margin: 20px;
@@ -73,13 +77,14 @@ section{
     border: solid 1px lightgray;
     box-shadow: 0 0 8px 8px rgba(211,211,211,0.3);
 }
-section img{
-    display: block;
-    margin: auto;
-    width: auto;
-    height: 100%;
-    opacity: 0.5;
-}
+/*    section img{
+        display: block;
+        margin: auto;
+        width: auto;
+        height: auto%;
+        opacity: 0.5;
+    }
+**/
 footer{
     margin: 20px;
 }
