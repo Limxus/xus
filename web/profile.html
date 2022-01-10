@@ -5,34 +5,42 @@
     <title>Han's_Factory</title>
     <style>
         @import url("style.css");
+        #main_box{
+            background-color: gray;
+            margin: 20px;
+            margin-top: 0;
+            width: 1fr;
+            height: 80vh;
+        }
+        #profile{
+            background-color: gray;
+            width: fit-content;
+            justify-self: center;
+        }
+        #profile a{
+            color: white;
+        }
     </style>
+    <script src="../javascript.js"></script>
+    <script>
+        
+    </script>
 </head>
-
-<body>
+<body onload="Clock()">
     <header>
-    <h1>Han's Factory</h1>
+    <h1><a href="../index.html">Han's Factory</a></h1>
     </header>
         <nav>
-        <li><a href="">Profile</a></li>
+        <li id="profile"><a href="profile.html">Profile</a></li>
         <li><a href="">Project</a></li>
         <li><a href="">Steck</a></li>
         <li><a href="">Blog</a></li>
-        <div class="wther">
-            claud
-        </div>
+        <div id="time"></div>
         </nav>
 
-        <p>
-            안녕하세요 :) 이곳은 제 개발 실험 공장입니다.
-        </p>
-
-        <section>
-            <img calss="mian_background" src="../img/background.jpg">
-        </section>
-
-        <footer>
-            방문해 주셔서 감사합니다. 현재 제작중에 있습니다.
-        </footer>
+        <div id="main_box">
+            a
+        </div>
 
     </body>
 

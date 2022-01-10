@@ -1,19 +1,6 @@
-
-@font-face {
-    font-family: 'RixYeoljeongdo_Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 @font-face {
     font-family: 'SEBANG_Gothic_Regular';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'SEBANG_Gothic_Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -23,16 +10,27 @@ body{
     overflow: hidden;
     font-family: 'SEBANG_Gothic_Regular';
 }
+
 header{
     padding-left: 20px;
     border-bottom: solid gray 1px;
     height: 50px;
 }
-a, a:visited{
+a{
+    text-decoration: none;   
+}
+
+a:visited{
     text-decoration: none;
     color: black;
 }
-a:hover{
+nav a{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+nav a:hover{
     background-color: gray;
     color: white;
     padding-left: 20px;
@@ -40,7 +38,7 @@ a:hover{
     padding-top: 5px;
     padding-bottom: 5px;
 }
-a:active{
+nav a:active{
     background-color: black;
     color:  white;
     padding-left: 20px;
@@ -53,38 +51,19 @@ nav{
     display: grid;
     text-align: center;
     padding-left: 0;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    margin-right: 20px;
-    grid-template-columns: 100px 100px 100px 100px auto 100px 220px ;
-    box-shadow: 0 5px 8px -8px gray;
+    grid-template-columns:  ;
+}
+li{
+    border-bottom: solid gray 1px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 #time{
     font-weight: bold;
-    font-size: x-large;
+    font-size: 150%;
     grid-column: 7;
-    justify-self: start;
-}
-p{
-    margin: 20px;
-}
-section{
-    margin: 20px;
-    width: auto;
-    height: 55vh;
-    padding: 10px;
-    border-radius: 10px;
-    border: solid 1px lightgray;
-    box-shadow: 0 0 8px 8px rgba(211,211,211,0.3);
-}
-/*    section img{
-        display: block;
-        margin: auto;
-        width: auto;
-        height: auto%;
-        opacity: 0.5;
-    }
-**/
-footer{
-    margin: 20px;
+    justify-self: end;
+    padding-top: 10px;
+    text-align: left;
+    width: 230px;
 }
