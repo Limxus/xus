@@ -10,16 +10,42 @@ body{
     overflow: hidden;
     font-family: 'SEBANG_Gothic_Regular';
 }
-
 header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+
+header h1{
     padding-left: 20px;
-    border-bottom: solid gray 1px;
-    height: 50px;
+    height: fit-content;
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 10px;
+    grid-column: 1/3;
 }
+#togle{
+    display: none;
+    width: 30px;
+    height: 30px;
+    justify-self: center;
+    align-self: end;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+#togle div{
+    height: 5px;
+    width: 30px;
+    margin-bottom: 5px;
+    background-color: black;
+}
+
+#togle :last-child{
+    margin-bottom: 0;
+}
+
 a{
     text-decoration: none;   
+    color: black;
 }
 
 a:visited{
@@ -50,12 +76,13 @@ nav a:active{
 }
 nav{
     list-style: none;
-    display: grid;
     text-align: center;
     margin-left: 20px;
     margin-right: 20px;
-    grid-template-columns: 3fr 1fr;
     border-bottom: solid gray 1px;
+    border-top: solid gray 1px;
+    grid-column: 1/4;
+    grid-row: 2;
 }
 li{
     padding-bottom: 10px;
@@ -74,26 +101,22 @@ ul{
     text-align: left;
     width: 230px;
     justify-self: end;
-    align-self: center;
-}
-
-@media screen and (max-width: 920px) {
-    body {
-        color: blue;
-    }
-    #time{
-        display: none;
-    }
+    margin-bottom: 10px;
+    align-self: end;
 }
 
 @media screen and (max-width: 720px) {
+    #time{
+        display: none;
+    }
     nav{
         display: none;
+    }
+    #togle{
+        display: inline;
     }
 }
 
 @media screen and (max-width: 360px) {
-    header{
-        height: fit-content;
-    }
+
 }
