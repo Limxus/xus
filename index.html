@@ -22,27 +22,31 @@
         }        
     </style>
     <script src="javascript.js"></script>
-
+    <script>
+        function togle() {
+        const nav   = document.querySelector('nav');
+        nav.classList.toggle('active');
+        }
+    </script>
 </head>
 <body>
     <header>
     <h1><a href="index.html">Han's Factory</a></h1>
-    <div id="togle">
+    <div id="togle" onclick='togle()'>
         <div></div>
         <div></div>
         <div></div>
     </div>
     <div id="time"></div>
-        <nav>
-            <ul>
-                <li id="profile"><a href="web/profile.html">Profile</a></li>
-                <li id="project"><a href="web/project.html">Project</a></li>
-                <li id="steck"><a href="web/steck.html">Steck</a></li>
-                <li id="blog"><a href="web/blog.html">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
-
+</header>
+    <nav>
+        <ul>
+            <li id="profile"><a href="web/profile.html">Profile</a></li>
+            <li id="project"><a href="web/project.html">Project</a></li>
+            <li id="steck"><a href="web/steck.html">Steck</a></li>
+            <li id="blog"><a href="web/blog.html">Blog</a></li>
+        </ul>
+    </nav>
         <p>
             안녕하세요 :) 이곳은 제 개발 실험 공장입니다.
         </p>

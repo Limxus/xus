@@ -31,6 +31,7 @@ header h1{
     align-self: end;
     transition: all 0.3s ease;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 #togle div{
     height: 5px;
@@ -58,7 +59,7 @@ nav a{
     padding-top: 5px;
     padding-bottom: 5px;
 }
-nav a:hover{
+nav li:hover{
     background-color: gray;
     color: white;
     padding-left: 20px;
@@ -81,19 +82,19 @@ nav{
     margin-right: 20px;
     border-bottom: solid gray 1px;
     border-top: solid gray 1px;
-    grid-column: 1/4;
     grid-row: 2;
+    display: flex;
 }
 li{
     padding-bottom: 10px;
     padding-top: 10px;
-    justify-self: center;
     width: 130px;
 }
 ul{
-    display: flex;
     list-style: none;
     margin: 0;
+    padding: 0;
+    display: flex;
 }
 #time{
     font-weight: bold;
@@ -111,9 +112,16 @@ ul{
     }
     nav{
         display: none;
+        justify-content: center;
+    }
+    ul{
+        flex-direction: column;
     }
     #togle{
-        display: inline;
+        display: block;
+    }
+    nav.active{
+        display: flex;
     }
 }
 
