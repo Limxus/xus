@@ -3,62 +3,37 @@
 <head>
     <meta charset="utf-8">
     <title>Han's_Factory</title>
-    <style>
-        @import url("web/style.css");
-        p{
-            margin: 20px;
-        }
-        section{
-            margin: 20px;
-            width: auto;
-            height: 55vh;
-            padding: 10px;
-            border-radius: 10px;
-            border: solid 1px lightgray;
-            box-shadow: 0 0 8px 8px rgba(211,211,211,0.3);
-        }
-        footer{
-            margin: 20px;
-        }        
-    </style>
+    <style>@import url("web/style.css");</style>
     <script src="javascript.js"></script>
-    <script>
-        function togle() {
-        const nav   = document.querySelector('nav');
-        nav.classList.toggle('active');
-        }
-    </script>
 </head>
+
 <body>
     <header>
-    <h1><a href="index.html">Han's Factory</a></h1>
-    <div id="togle" onclick='togle()'>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <div id="time"></div>
-</header>
+        <h1 class="title"><a href="index.html">Han's Factory</a></h1>
+        <div id="toggle" onclick='toggle()'><img src="img/menu.png" alt=""></div>
+        <div id="time"></div>
+    </header>
+
     <nav>
-        <ul>
-            <li id="profile"><a href="web/profile.html">Profile</a></li>
-            <li id="project"><a href="web/project.html">Project</a></li>
-            <li id="steck"><a href="web/steck.html">Steck</a></li>
-            <li id="blog"><a href="web/blog.html">Blog</a></li>
-        </ul>
+        <a href="web/profile.html">Profile</a>
+        <a href="web/project.html">Project</a>
+        <a href="web/steck.html">Steck</a>
+        <a href="web/blog.html">Blog</a>
     </nav>
-        <p>
-            안녕하세요 :) 이곳은 제 개발 실험 공장입니다.
-        </p>
 
-            <section>
+    <section class="conbert">
+    <p>
+        안녕하세요 :) 이곳은 제 개발 실험 공장입니다.
+    </p>
 
-            </section>
+    <section class="main_box">
 
-        <footer>
-            방문해 주셔서 감사합니다. 현재 제작중에 있습니다.
-        </footer>
+    </section>
 
-    </body>
+    <footer>
+        방문해 주셔서 감사합니다. 현재 제작중에 있습니다.
+    </footer>
+    </section>
 
+</body>
 </html>

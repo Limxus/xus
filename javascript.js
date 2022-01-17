@@ -28,7 +28,7 @@ window.onload = setInterval(function(){
     Clock.innerText = time;   
 },500);
 
-function togle() {
+function toggle() {
     const nav   = document.querySelector('nav');
     nav.classList.toggle('active');
     }
