@@ -31,4 +31,12 @@ window.onload = setInterval(function(){
 function toggle() {
     const nav   = document.querySelector('nav');
     nav.classList.toggle('active');
-    }
+}
+
+function fetchsection(name, section){
+    fetch(name).then(function(response){
+        response.text().then(function(text){
+            document.querySelector(section).innerHTML = text;
+        })
+    });
+}
