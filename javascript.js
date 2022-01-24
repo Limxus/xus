@@ -1,3 +1,8 @@
+const fs = require("fs");
+function fileList(forder) {
+    return fs.readdirSync(forder);
+}
+
 window.onload = setInterval(function(){
     var now = new Date();
     var Clock = document.getElementById('time');
