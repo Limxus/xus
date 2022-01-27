@@ -36,33 +36,39 @@ footer{
 } 
 
 /*블로그*/
+.blog_box{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
 .blog_section{
-    width: fit-content;
     padding: 20px;
     margin: 20px;
-    display: inline-flex;
-    flex-wrap: wrap;
 }
 .blog_page{
-    margin: 20px 20px 30px 20px;
-    width: 200px;
-    height: 180px;
-    border-radius: 10px;
-    border: solid 1px lightgray;
-    box-shadow: 0 0 8px 8px rgba(211,211,211,0.3);
-    transition-timing-function: ease-out;
-    transition-duration: 0.5s;
-    flex-shrink: 0;
-}
-.blog_page:hover{
-    transform: scale(1.2);
-    border: solid 1px rgb(135, 206, 235);
-    box-shadow: 0 0 8px 8px rgba(135, 206, 235,0.3);
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid gray 1px;
+    padding: 10px;
+    cursor: pointer;
 }
 .blog_page h1{
-    margin: 0;
-    text-align: center;
-    margin-top: 95%;
+    font-size: xx-large;
+    margin: 10px;
+}
+.blog_page .content{
+    color: lightgray;
+    margin-left: 10px;
+}
+.blog_box aside{
+    box-shadow: 0 0 8px 8px rgba(211,211,211,0.3);
+    margin: 20px;
+    padding: 10px;
+}
+aside h1{
+    margin-top: 0;
+}
+.blog_page .tag{
+    display: none;
 }
 
 /*헤더 그리드*/
@@ -107,8 +113,8 @@ nav{
     text-align: center;
     margin-left: 20px;
     margin-right: 20px;
-    border-bottom: solid gray 1px;
-    border-top: solid gray 1px;
+    border-bottom: solid gray 2px;
+    border-top: solid gray 2px;
     display: flex;
 }
 nav a{
@@ -144,13 +150,6 @@ nav a:active{
     p{
         border-top: solid 1px gray;
     }
-    .blog_section{
-        border-top: solid 1px gray;
-    }
 }
 
 @media screen and (max-width: 1000px) {
-    .blog_section{
-        grid-template-columns: repeat(3, 1fr);
-    }
-}

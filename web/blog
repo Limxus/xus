@@ -1,14 +1,25 @@
-<section class="blog_section">
-    <article class="blog_page"><h1>title</h1></article>
-    <article class="blog_page"></article>
-    <article class="blog_page"></article>
-    <article class="blog_page"></article>
-    <article class="blog_page"></article>
-    <article class="blog_page"></article>
-    <article class="blog_page"></article>
-    <article class="blog_page"></article>
-    <article class="blog_page"></article>
-    <article class="blog_page"></article>
-    <article class="blog_page"></article>
-    <article class="blog_page"></article>
-</section>
+<div class="blog_box">
+    <aside>
+        <h1>Category</h1>
+        <ul>
+            <li>a</li>
+            <li>a</li>
+            <li>a</li>
+        </ul>
+    </aside>
+
+    <section class="blog_section">
+        <article class="blog_page">
+            <div class="tag"></div>
+            <div class="day">day</div>
+            <h1>title</h1>
+            <div class="content">content</div>
+        </article>
+        <article class="blog_page">
+            <div class="tag"></div>
+            <div class="day">day</div>
+            <h1>title</h1>
+            <div class="content">content</div>
+        </article>
+    </section>
+</div>
