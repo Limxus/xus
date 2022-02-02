@@ -1,15 +1,14 @@
+const path = require("path");
 const fs = require("fs");
-function fileList(forder) {
-    return fs.readdirSync(forder);
-}
 
-const postList = fileList("blog");
+const filePath = path.join(__dirname,"blog_md");
+const fileList = fs.readdirSync(filePath);
+fileList.map(file=>{
+    const body = fs.readFileSync(`./blog_md/${file}`, "utf-8")
+    console.log(body)
+})
 
-console.log(postList);
-console.log(postList[1]);
+console.log(body)
 
-var i = 0;
-while (i < postList.length) {
-    console.log(postList[i]);
-    i = i + 1;
-}
+const hljs = require("highlight.js");
+const md = require("markdown_it");
