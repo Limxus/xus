@@ -20,7 +20,7 @@ const md = require("markdown-it")({
         const langL = lang.charAt(0).toUpperCase() + lang.slice(1);
         try {
           return (
-           `<h4 class = langName>${langL}</h4><pre class="hljs"><code>` +
+           `<h4 class = "langName">${langL}</h4><pre class="hljs"><code>` +
             hljs.highlight(lang, str, true).value +
             "</code></pre>"
           );
@@ -31,7 +31,7 @@ const md = require("markdown-it")({
       );
     }
   });
-
+/**
   fileList.map(file=>{
     const body = fs.readFileSync(`./blog_md/${file}`, "utf-8");
     console.log(body);
@@ -40,4 +40,29 @@ const md = require("markdown-it")({
     const bolgpost = ejs.render(blogLayout, {content: converted});
     const fileName = file.slice(0, file.indexOf(".")).toLowerCase();
     fs.writeFileSync(`./blog/${fileName}.html`, bolgpost);
-})
+}) */
+
+extractValue = text =>{
+  const string = text.match(/(\+{3})([\s\S]+?)\1/);
+  if (!string){return null;} else{
+    const valueLines = string[2].match(/[^\r\n]+/g);
+    const values = {};
+    if (valueLines){
+      valueLines.map(valueLine=>{
+        const keyAndValue = valueLine.match(/(.+?)=(.+)/);
+        if (keyAndValue){
+          const key = keyAndValue[1].replace(/\s/g,"");
+          const value = keyAndValue[2].replace(/['"]/g,"").trim();
+          values[key] = value;
+        }
+      });
+      return values;
+    }
+  }
+};
+
+fileList.map(file=>{
+  const body = fs.readFileSync(`./blog_md/${file}`, "utf-8");
+  extractValue(body);
+});
+

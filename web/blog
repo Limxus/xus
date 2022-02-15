@@ -1,13 +1,4 @@
 <div class="blog_box">
-    <aside>
-        <h1>Category</h1>
-        <ul>
-            <li>a</li>
-            <li>a</li>
-            <li>a</li>
-        </ul>
-    </aside>
-
     <section class="blog_section">
         <article class="blog_page">
             <div class="tag"></div>
@@ -22,4 +13,12 @@
             <div class="content">content</div>
         </article>
     </section>
+    <aside>
+        <h1>Category</h1>
+        <ul>
+            <li>a</li>
+            <li>a</li>
+            <li>a</li>
+        </ul>
+    </aside>
 </div>
