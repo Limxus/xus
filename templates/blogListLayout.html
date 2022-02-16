@@ -1,0 +1,22 @@
+<div class="blog_box">
+    <section class="blog_section">
+        <% lists.map(list => {%>
+            <article class="blog_page">
+                <div class="tag"><%=list.tag %></div>
+                <div class="day"><%=list.date %></div>
+                <h1><a onclick="fetchsection('./blog/<%=list.path %>', '.blog_section')">
+                    <%=list.title %>
+                </a></h1>
+                <div class="content"><%=list.desc %></div>
+            </article>
+        <% }) %>
+    </section>
+    <aside>
+        <h1>Category</h1>
+        <ul>
+            <li>a</li>
+            <li>a</li>
+            <li>a</li>
+        </ul>
+    </aside>
+</div>

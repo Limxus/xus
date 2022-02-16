@@ -5,6 +5,9 @@ const blogLayout = fs.readFileSync("./templates/blogLayout.html", "utf8")
 
 const filePath = path.join(__dirname,"blog_md");
 const fileList = fs.readdirSync(filePath);
+const blog_main = fs.readFileSync("./templates/blogListLayout.html", "utf8")
+
+const deployFiles = [];
 
 const hljs = require("highlight.js");
 const md = require("markdown-it")({
@@ -31,16 +34,10 @@ const md = require("markdown-it")({
       );
     }
   });
-/**
-  fileList.map(file=>{
-    const body = fs.readFileSync(`./blog_md/${file}`, "utf-8");
-    console.log(body);
-    const converted = md.render(body);
-    console.log(converted);
-    const bolgpost = ejs.render(blogLayout, {content: converted});
-    const fileName = file.slice(0, file.indexOf(".")).toLowerCase();
-    fs.writeFileSync(`./blog/${fileName}.html`, bolgpost);
-}) */
+
+const extractBody = text =>{
+  return text.replace(/(\+{3})([\s\S]+?)\1/,"");
+};
 
 extractValue = text =>{
   const string = text.match(/(\+{3})([\s\S]+?)\1/);
@@ -63,6 +60,27 @@ extractValue = text =>{
 
 fileList.map(file=>{
   const body = fs.readFileSync(`./blog_md/${file}`, "utf-8");
-  extractValue(body);
+  const converted = md.render(extractBody(body));
+  const value = extractValue(body);
+  if (value){
+    const title = value.title || " ";
+    const date = value.date || " ";
+    const desc = value.desc || " ";
+    const tag = value.tag || "기타";
+    const bolgpost = ejs.render(blogLayout,{
+      content :converted,
+      title, tag, date
+    });
+
+    const fileName = file.slice(0, file.indexOf(".")).toLowerCase();
+    fs.writeFileSync(`./blog/${fileName}.html`, bolgpost);
+
+    deployFiles.push({ path: `${fileName}.html`, title, date, desc, tag });
+    const blog_list = ejs.render(blog_main,{
+      lists: deployFiles
+    });
+
+    fs.writeFileSync("./web/blog", blog_list);
+  }
 });
 

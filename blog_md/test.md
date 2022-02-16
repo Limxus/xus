@@ -2,6 +2,7 @@
 title = 테스트
 desc = 테스트용 글입니다.
 date = 2022-02-15
+tag = test
 +++
 
 
