@@ -1,31 +1,32 @@
 <div class="blog_box">
     <section class="blog_section">
         
-            <article class="blog_page">
-                <div class="tag">test</div>
-                <div class="day">2022-02-15</div>
-                <h1><a onclick="fetchsection('./blog/test.html', '.blog_section')">
-                    테스트
-                </a></h1>
-                <div class="content">테스트용 글입니다.</div>
+            <article class="blog_page" onclick="fetchsection('./blog/20220218 1237.html', '.blog_section')">
+                    <div class="tag">기타</div>
+                    <div class="day">2022-02-18</div>
+                    <h1>첫 블로그 게시</h1>
+                    <div class="content">첫 블로그를 게시하였당</div>
             </article>
         
-            <article class="blog_page">
-                <div class="tag">기타</div>
-                <div class="day">2022-02-16</div>
-                <h1><a onclick="fetchsection('./blog/test2.html', '.blog_section')">
-                    테스트2
-                </a></h1>
-                <div class="content">테스트용 글2 입니다.</div>
+            <article class="blog_page" onclick="fetchsection('./blog/test.html', '.blog_section')">
+                    <div class="tag">test</div>
+                    <div class="day">2022-02-15</div>
+                    <h1>테스트</h1>
+                    <div class="content">테스트용 글입니다.</div>
+            </article>
+        
+            <article class="blog_page" onclick="fetchsection('./blog/test2.html', '.blog_section')">
+                    <div class="tag">기타</div>
+                    <div class="day">2022-02-16</div>
+                    <h1>테스트2</h1>
+                    <div class="content">테스트용 글2 입니다.</div>
             </article>
         
     </section>
     <aside>
         <h1>Category</h1>
         <ul>
-            <li>a</li>
-            <li>a</li>
-            <li>a</li>
+            <li><a onclick="fetchsection('web/blog', '.conbert')">All</a></li>
         </ul>
     </aside>
 </div>

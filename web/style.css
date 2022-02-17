@@ -27,13 +27,44 @@ p{
     width: auto;
     height: 55vh;
     padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     border-radius: 10px;
     border: solid 1px lightgray;
     box-shadow: 0 0 8px 8px rgba(211,211,211,0.3);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60px auto;
 }
 footer{
     margin: 20px;
-} 
+}
+.main_box h1{
+    grid-column: 1/3;
+    font-size: 200%;
+}
+.main_box img{
+    justify-self: center;
+}
+.main_box img, .main_box .profile{
+    align-self: center;
+}
+.profile{
+    height: 300px;
+    width: 80%;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    padding-left: 40px;
+    border: 5px dashed lightgray;
+    border-radius: 10px;
+}
+.profile li{
+    list-style: none;
+    font-size: 120%;
+}
 
 /*블로그*/
 .blog_box{
@@ -59,6 +90,9 @@ footer{
     color: gray;
     margin-left: 10px;
 }
+.blog_page:hover{
+    background-color: rgb(228, 228, 228);
+}
 .blog_box aside{
     box-shadow: 0 0 8px 8px rgba(211,211,211,0.3);
     margin: 20px;
@@ -69,6 +103,67 @@ aside h1{
 }
 .blog_page .tag{
     display: none;
+}
+.blog_box ul{
+    padding-left: 30px;
+}
+.blog_box a{
+    cursor: pointer;
+}
+.blog_box a:hover{
+    color: lightgray;
+}
+
+/*스텍*/
+.steck_box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 40px;
+    padding: 50px;
+}
+.steck{
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 1fr 1fr;
+    width: fit-content;
+    height: fit-content;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 0 8px 8px rgba(211,211,211,0.3);
+}
+.level_box{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    border: 2px dashed lightgray;
+}
+.level_boxOn{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: black;
+    border: 2px outset gray;
+}
+.level{
+    display: flex;
+    gap: 3px;
+    border: 1px solid black;
+    width: fit-content;
+    height: fit-content;
+    padding: 2px;
+    border-radius: 5px;
+    align-self: center;
+}
+.steck img{
+    grid-row: 1/3;
+    width: 100px;
+    height: 100px;
+}
+.status{
+    align-self: center;
+    border-bottom: 1px solid gray;
 }
 
 /*헤더 그리드*/
@@ -94,7 +189,7 @@ header .title{
     margin-bottom: 10px;
     cursor: pointer;
 }
-img{
+header img{
     width: 25px;
     height: 25px;
 }
@@ -133,7 +228,7 @@ nav a:active{
 } 
 
 /*반응형*/
-@media screen and (max-width: 720px) {
+@media (max-width: 720px) {
     #time{
         display: none;
     }
@@ -150,7 +245,4 @@ nav a:active{
     p{
         border-top: solid 1px gray;
     }
-}
-
-@media screen and (max-width: 1000px) {
 }

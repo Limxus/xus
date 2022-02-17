@@ -5,6 +5,7 @@
     <title>Han's_Factory</title>
     <style>@import url("web/style.css");</style>
     <script src="javascript.js"></script>
+    <link rel="stylesheet" href="/node_modules/highlight.js/styles/vs2015.css">
 </head>
 
 <body>
@@ -15,19 +16,26 @@
     </header>
 
     <nav>
-        <a onclick="fetchsection('web/profile', '.conbert')">Profile</a>
         <a onclick="fetchsection('web/blog', '.conbert')">Blog</a>
-        <a onclick="fetchsection('web/project', '.conbert')">Project</a>
         <a onclick="fetchsection('web/steck', '.conbert')">Steck</a>
+        <a onclick="fetchsection('web/project', '.conbert')">Project</a>
     </nav>
 
     <section class="conbert">
-    <p>
-        안녕하세요 :) 이곳은 제 개발 실험 공장입니다.
-    </p>
-
+        <p>
+            안녕하세요 :) 이곳은 제 개발 실험 공장입니다.
+        </p>
     <section class="main_box">
-
+        <h1>Profile</h1>
+        <img src="img/me.png" alt="" height="350" width="350">
+        <div class="profile">
+            <li><b>Name : </b>임정한</li>
+            <li><b>Age : </b>27</li>
+            <li><b>Mail : </b>wjdgks4752@gmail.com</li>
+            <li><b>Github : </b>https://github.com/jeoung-han</li>
+            <br>
+            <li>2022년 처음 시작하는 맨땅에서의 개발일기</li>
+        </div>
     </section>
     </section>
     <footer>

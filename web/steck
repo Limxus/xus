@@ -1,3 +1,86 @@
-<section>
-스텍
+<section class="steck_box">
+<article class="steck">
+    <img src="../img/html.png" alt="">
+    <span class="status">
+        <div><b>Html</b></div>
+        <div>Level : 1</div>
+    </span>
+    <span class="level">
+        <div class="level_boxOn"></div>
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+    </span>
+</article>
+<article class="steck">
+    <img src="../img/css.png" alt="">
+    <span class="status">
+        <div><b>CSS</b></div>
+        <div>Level : 1</div>
+    </span>
+    <span class="level">
+        <div class="level_boxOn"></div>
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+    </span>
+</article>
+<article class="steck">
+    <img src="../img/js.png" alt="">
+    <span class="status">
+        <div><b>Javascript</b></div>
+        <div>Level : 1</div>
+    </span>
+    <span class="level">
+        <div class="level_boxOn"></div>
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+    </span>
+</article>
+<article class="steck">
+    <img src="../img/nodejs.png" alt="">
+    <span class="status">
+        <div><b>Nodejs</b></div>
+        <div>Level : 1</div>
+    </span>
+    <span class="level">
+        <div class="level_boxOn"></div>
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+    </span>
+</article>
+<article class="steck">
+    <img src="../img/java.png" alt="">
+    <span class="status">
+        <div><b>Java</b></div>
+        <div>Level : 0</div>
+    </span>
+    <span class="level">
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+    </span>
+</article>
+<article class="steck">
+    <img src="../img/py.png" alt="">
+    <span class="status">
+        <div><b>Python</b></div>
+        <div>Level : 0</div>
+    </span>
+    <span class="level">
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+        <div class="level_box"></div>
+    </span>
+</article>
 </section>
