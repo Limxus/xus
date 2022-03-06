@@ -4,7 +4,8 @@ const ejs = require("ejs");
 const blogLayout = fs.readFileSync("./templates/blogLayout.html", "utf8")
 
 const filePath = path.join(__dirname,"blog_md");
-const fileList = fs.readdirSync(filePath);
+const blogFile = fs.readdirSync(filePath);
+const fileList = blogFile.reverse();
 const blog_main = fs.readFileSync("./templates/blogListLayout.html", "utf8")
 
 const deployFiles = [];
@@ -67,13 +68,13 @@ fileList.map(file=>{
     const date = value.date || " ";
     const desc = value.desc || " ";
     const tag = value.tag || "기타";
-    const bolgpost = ejs.render(blogLayout,{
+    const blogPost = ejs.render(blogLayout,{
       content :converted,
       title, tag, date
     });
 
     const fileName = file.slice(0, file.indexOf(".")).toLowerCase();
-    fs.writeFileSync(`./blog/${fileName}.html`, bolgpost);
+    fs.writeFileSync(`./blog/${fileName}.html`, blogPost);
 
     deployFiles.push({ path: `${fileName}.html`, title, date, desc, tag });
     const blog_list = ejs.render(blog_main,{

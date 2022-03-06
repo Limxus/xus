@@ -1,0 +1,76 @@
+<div class="blog_header">
+    <link rel="stylesheet" href="./blog/blog_style.css">
+    <h1>
+        블로그(포트폴리오) 제작기 (2)
+    </h1>
+    <span>2022-02-18</span>
+    <span>project_blog</span>
+</div>
+<section class="content">
+    <p>첫 페이지를 꾸미고 나서
+가장 먼저 한 일은 뭔가 기능을 추가해 보고 싶다는 것이였다.
+그래서 무엇을 추가할지 고민하다가.</p>
+<p>시계를 추가해보자! 라는 마음이 생겨 가볍게 시계를 추가해보고 싶어졌다.
+이에 나는 <code>javascript</code>를 이용하여 제작하고리 하였다. 하지만… 생각보단 쉽지않았다.</p>
+<pre><code class="language-javascript"><h4 class = "langName">Javascript</h4><pre class="hljs"><code><span class="hljs-variable language_">window</span>.<span class="hljs-property">onload</span> = <span class="hljs-built_in">setInterval</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>){
+    <span class="hljs-keyword">var</span> now = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();
+    <span class="hljs-keyword">var</span> <span class="hljs-title class_">Clock</span> = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;time&#x27;</span>);
+    <span class="hljs-keyword">var</span> <span class="hljs-title class_">Hours</span> = now.<span class="hljs-title function_">getHours</span>();
+    <span class="hljs-keyword">var</span> <span class="hljs-title class_">Minutes</span> = <span class="hljs-string">&quot;00&quot;</span> + now.<span class="hljs-title function_">getMinutes</span>();
+    <span class="hljs-keyword">var</span> <span class="hljs-title class_">Seconds</span> = <span class="hljs-string">&quot;00&quot;</span> + now.<span class="hljs-title function_">getSeconds</span>();
+    <span class="hljs-keyword">var</span> time = <span class="hljs-string">&quot;&quot;</span>;
+
+    <span class="hljs-keyword">var</span> day = [<span class="hljs-string">&#x27;SUN&#x27;</span>, <span class="hljs-string">&#x27;MON&#x27;</span>, <span class="hljs-string">&#x27;TUE&#x27;</span>, <span class="hljs-string">&#x27;WED&#x27;</span>, <span class="hljs-string">&#x27;THU&#x27;</span>, <span class="hljs-string">&#x27;FRI&#x27;</span>, <span class="hljs-string">&#x27;SAT&#x27;</span>]
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i!=now.<span class="hljs-title function_">getDay</span>(); i++){
+    }
+    <span class="hljs-keyword">var</span> today = day[i];
+    time += today + <span class="hljs-string">&quot; &quot;</span>;
+    <span class="hljs-keyword">if</span>(<span class="hljs-title class_">Hours</span> &gt;= <span class="hljs-number">12</span>){
+        time += <span class="hljs-string">&quot;PM &quot;</span>;
+        <span class="hljs-keyword">if</span>(<span class="hljs-title class_">Hours</span> === <span class="hljs-number">12</span>){
+        time += <span class="hljs-title class_">Hours</span>;
+        } <span class="hljs-keyword">else</span>{
+        time += <span class="hljs-title class_">Hours</span> - <span class="hljs-number">12</span>;
+        }
+    } <span class="hljs-keyword">else</span>{
+        time += <span class="hljs-string">&quot;AM &quot;</span>;
+        time += (<span class="hljs-string">&quot;00&quot;</span> + <span class="hljs-title class_">Hours</span>).<span class="hljs-title function_">slice</span>(-<span class="hljs-number">2</span>);
+    }
+    time += <span class="hljs-string">&quot;:&quot;</span> + <span class="hljs-title class_">Minutes</span>.<span class="hljs-title function_">slice</span>(-<span class="hljs-number">2</span>);
+    time += <span class="hljs-string">&quot;:&quot;</span> + <span class="hljs-title class_">Seconds</span>.<span class="hljs-title function_">slice</span>(-<span class="hljs-number">2</span>);
+
+    <span class="hljs-title class_">Clock</span>.<span class="hljs-property">innerText</span> = time;   
+},<span class="hljs-number">500</span>);
+</code></pre></code></pre>
+<p>시계를 만든 코드이다.
+처음에는 단순히 <code>html</code>혹은 <code>js</code>에 현재시간을 얻을 수 있는 기능이 있으면 그것을 변수로 넣고
+주어진 조건에 따라 표기하면 되겠지~  라는 생각으로 시작하였다.</p>
+<p>해당기능은 <code>new Date();</code>라는 명령어로 현재시간을 얻을 수 있었고 해당 정보를 <code>now</code>라는 변수에 넣어줬다. 이제 <code>now</code>의 정보에서 시간과 분, 초를 각각 변수에 넣어주었다.
+<code>now</code>의 정보에서 <code>day</code>정보를 가지고 올때는 해당정보를 0~6까지의 숫자로 가지고 온다 따라서 요일을 표시하기위해 <code>day</code>변수에 요일을 나타내는 배열을 추가하였다.</p>
+<pre><code class="language-javascript"><h4 class = "langName">Javascript</h4><pre class="hljs"><code>  <span class="hljs-keyword">var</span> day = [<span class="hljs-string">&#x27;SUN&#x27;</span>, <span class="hljs-string">&#x27;MON&#x27;</span>, <span class="hljs-string">&#x27;TUE&#x27;</span>, <span class="hljs-string">&#x27;WED&#x27;</span>, <span class="hljs-string">&#x27;THU&#x27;</span>, <span class="hljs-string">&#x27;FRI&#x27;</span>, <span class="hljs-string">&#x27;SAT&#x27;</span>]
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i!=now.<span class="hljs-title function_">getDay</span>(); i++){
+    }
+    <span class="hljs-keyword">var</span> today = day[i];
+</code></pre></code></pre>
+<p>해당 배열을 현재날짜와 일치하는 위치가 될 때까지 반복하는 반복문을 만들어 현재 요일을 추출하였다.
+요일 뒤에는 오후와 오전을 나타내는 AM, PM을 넣고싶어서
+if 조건문을 통하여 만들었다.</p>
+<pre><code class="language-javascript"><h4 class = "langName">Javascript</h4><pre class="hljs"><code>   <span class="hljs-keyword">if</span>(<span class="hljs-title class_">Hours</span> &gt;= <span class="hljs-number">12</span>){
+        time += <span class="hljs-string">&quot;PM &quot;</span>;
+        <span class="hljs-keyword">if</span>(<span class="hljs-title class_">Hours</span> === <span class="hljs-number">12</span>){
+        time += <span class="hljs-title class_">Hours</span>;
+        } <span class="hljs-keyword">else</span>{
+        time += <span class="hljs-title class_">Hours</span> - <span class="hljs-number">12</span>;
+        }
+    } <span class="hljs-keyword">else</span>{
+        time += <span class="hljs-string">&quot;AM &quot;</span>;
+        time += (<span class="hljs-string">&quot;00&quot;</span> + <span class="hljs-title class_">Hours</span>).<span class="hljs-title function_">slice</span>(-<span class="hljs-number">2</span>);
+    }
+</code></pre></code></pre>
+<p>이렇게 얻은 정보들을 <code>time</code>변수에 차례대로 넣어주었고 해당 변수를 innerText를 통해 html 태그에 넣어줬다.</p>
+<p>이렇게 제작된 시계는 <strong>FRI PM 4:5:34</strong> 이런식으로 출력되었고 나는 <strong>04:05:34</strong>로 출력되길 원하였고
+이걸 고민하다가 구글링한 결과 얻은 정보들 앞에 &quot;00&quot;을 추가하여 get으로 얻은 정보(숫자)를 문자열로 변경함과 동시에 <strong>001 ~ 0024</strong> 이런식으로 정보를 변환해 주었다.</p>
+<p>이렇게 얻은 정보를
+<code>.slice(-2);</code>를 통해 뒤에서 두글자만 가지고 왔다. 001이라면 01로 0024라면 24만 가지고게 된 것이다.</p>
+
+</section>

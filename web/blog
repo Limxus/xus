@@ -1,25 +1,32 @@
 <div class="blog_box">
     <section class="blog_section">
         
+            <article class="blog_page" onclick="fetchsection('./blog/20220306 1130.html', '.blog_section')">
+                    <div class="tag">기타</div>
+                    <div class="day">2022-03-06</div>
+                    <h1>[HTML]기초 공부</h1>
+                    <div class="content">복습을 위한 html 개념 확인</div>
+            </article>
+        
+            <article class="blog_page" onclick="fetchsection('./blog/20220218 1629.html', '.blog_section')">
+                    <div class="tag">project_blog</div>
+                    <div class="day">2022-02-18</div>
+                    <h1>블로그(포트폴리오) 제작기 (2)</h1>
+                    <div class="content">블로그에 재미있는 기능을 추가하기 위한 js</div>
+            </article>
+        
+            <article class="blog_page" onclick="fetchsection('./blog/20220218 1512.html', '.blog_section')">
+                    <div class="tag">project_blog</div>
+                    <div class="day">2022-02-18</div>
+                    <h1>블로그(포트폴리오) 제작기 (1)</h1>
+                    <div class="content">첫 난관</div>
+            </article>
+        
             <article class="blog_page" onclick="fetchsection('./blog/20220218 1237.html', '.blog_section')">
                     <div class="tag">기타</div>
                     <div class="day">2022-02-18</div>
                     <h1>첫 블로그 게시</h1>
                     <div class="content">첫 블로그를 게시하였당</div>
-            </article>
-        
-            <article class="blog_page" onclick="fetchsection('./blog/test.html', '.blog_section')">
-                    <div class="tag">test</div>
-                    <div class="day">2022-02-15</div>
-                    <h1>테스트</h1>
-                    <div class="content">테스트용 글입니다.</div>
-            </article>
-        
-            <article class="blog_page" onclick="fetchsection('./blog/test2.html', '.blog_section')">
-                    <div class="tag">기타</div>
-                    <div class="day">2022-02-16</div>
-                    <h1>테스트2</h1>
-                    <div class="content">테스트용 글2 입니다.</div>
             </article>
         
     </section>

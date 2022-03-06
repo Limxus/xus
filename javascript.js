@@ -16,7 +16,8 @@ window.onload = setInterval(function(){
         if(Hours === 12){
         time += Hours;
         } else{
-        time += Hours - 12;
+        var HoursAm = Hours - 12;
+        time += ("00" + HoursAm).slice(-2);
         }
     } else{
         time += "AM ";

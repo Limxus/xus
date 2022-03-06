@@ -1,0 +1,63 @@
+<div class="blog_header">
+    <link rel="stylesheet" href="./blog/blog_style.css">
+    <h1>
+        블로그(포트폴리오) 제작기 (1)
+    </h1>
+    <span>2022-02-18</span>
+    <span>project_blog</span>
+</div>
+<section class="content">
+    <p>처음 이 사이트를 만들기로 계획한 이유는 공부의 목적이다.개발을 처음 접하고 공부하자 마음먹고 처음 알게되었고 지금도 유용하게 공부를 진행하고 있는 <a href="https://opentutorials.org/course/1">‘생활코딩’</a> 에서 개발을 처음 접하였다.너무나도 유익한 사이트라 누구에게나 추천해주고 싶은 사이트이다.</p>
+<p>공부하기 전 많은 유튜브 및 블로그 등에서 이야기하길 개발의 가장 좋은 공부법은 무언가를 '개발’해 보는것이라고 말하였다.
+그래서 나도 무언가를 만들어보자 마음먹게 되었고 내가 공부하는 내용들, 그리고 나를 어필할 수 있는 사이트를 만들기로 마음먹었다.</p>
+<p>처음으로 생활코딩에서 web에 관한 수업에서 HTML, CSS, JS에 관하여 배우고 그 기초를 기반으로
+사이트 제작에 들어갔다.</p>
+<pre><code class="language-html"><h4 class = "langName">Html</h4><pre class="hljs"><code><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Yeon&#x27;s_Factory<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css">
+        <span class="hljs-selector-tag">li</span>{
+            <span class="hljs-attribute">list-style</span>:none;
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Yeon&#x27;s Factory<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+            hellow :)
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span> 
+</code></pre></code></pre>
+<p>첫 코드이다 뭔가 이렇게 다시 작성하니 감격이네</p>
+<p>이후 기본적인 코드들을 작성하고 css를 추가하였다.
+css는 html의 태그를 박스로 감싸 디자인 할 수 있도록 도와준다
+기본적인 형태는 width와 height로 구성된 본체 겉에 padding이 감싸고있고 그 위에 border, margin 순으로 감싸고있다.</p>
+<p><img src="../img/css%20%ED%99%95%EC%9D%B8.png" alt="">
+크롬의 검사기능을 통해 직관적으로 볼 수 있어서 좋았다.</p>
+<p>기본적인 css는 이 박스들을 어떻게 꾸미고 나열할것인가가 메인인 듯하다고 생각하였다.
+또한 이 박스를 구분하는 가장 기본적인 형태로
+<strong>inline</strong>과 <strong>block</strong> 형태가 있다고 한다.</p>
+<p><strong>inline</strong> 은 네모의 형태가 해당 요소의 크기만큼 차지하고 있다고 한다면
+<strong>block</strong> 은 네모의 형태가 요소의 크기가 요소의 크기에 맞는것이 아닌 한줄을 그대로 차지한다는 점이 있다.</p>
+<p>대표적인 inline 태그는 <code>&lt;span&gt;</code> 태그가 있다. 대표적인 block 태그는 <code>&lt;h1&gt;</code>과 <code>&lt;div&gt;</code>가 있다.</p>
+<p>이러한 네모네모의 요소들을 보다 형식적이게 깔끔하게 정리하기 위한 기능으로서
+<strong>flex</strong>와 <strong>gird</strong>가 등장하게 된다.</p>
+<p>해당관련으로 <a href="https://studiomeal.com/archives/533">1분코딩</a>이라는 페이지에서 자세하게 설명하고 있어서
+참고하였다.</p>
+<p>간단하게 둘다 네모네모 들을 정렬하고 관리하는 그룹으로 만드는 시스템이다.
+<strong>flex</strong>는 그 그룹을 한줄로 정리하는 형태이고, <strong>gird</strong>는 좀더 테이블형식에 가깝게 정리를 도와준다.</p>
+<p>이 두가지를 활용하면 엄청나게 깔끔하게 html 태그들을 정리할 수 있다.</p>
+<hr>
+<p>이렇게 처음에는 html과 css 두가지를 이용하여 간단한 페이지의 레이아웃을 정리 제작하였다.</p>
+
+</section>
