@@ -1,0 +1,304 @@
+@import url(../reset.css);
+
+body{
+    overflow-x: hidden;
+}
+
+#sky{
+    position: absolute;
+    background: linear-gradient(to top, rgb(165, 219, 240), white);
+    width: 100%;
+    height: 600px;
+}
+
+.light{
+    width: 600px;
+    height: 30px;
+    /* background-color: white;  */
+    background: linear-gradient(to right, white 60%, transparent);
+    /* box-shadow: 0 0 3px 10px white; */
+
+    display: block;
+
+    opacity: 80%;
+    transition: 0.8s;
+    z-index: 4;
+}
+
+#l1{
+    transform: translate(100px) perspective(200px) rotate(60deg) rotateY(-30deg);
+}
+
+#l2{
+    height: 30px;
+    transform: translate(-50px) perspective(200px) rotate(90deg) rotateY(-30deg);
+}
+
+#l3{
+    height: 10px;
+    transform: translate(150px) perspective(200px) rotate(40deg) rotateY(-30deg);
+}
+
+.absolute{
+    position: absolute;
+}
+
+.sea{
+    position: absolute;
+    top: 500px;
+    width: 100%;
+    height: 150px;
+
+    /* background-color: red; */
+}
+
+#s1{
+    top: 500px;
+    background-color: skyblue;
+    animation: ani5 2s infinite alternate ease-in-out;
+}
+
+#s2{
+    top: 520px;
+    background-color: rgb(99, 155, 228);
+    animation: ani4 1s infinite alternate ease-in-out;
+}
+
+#s3{
+    top: 540px;
+    background-color: rgb(0, 60, 255);
+    animation: ani5 0.8s infinite alternate-reverse ease-in-out;
+}
+
+#s4{
+    top: 560px;
+    background-color: blue;
+    animation: ani4 1.5s infinite alternate-reverse ease-in-out;
+}
+
+#s5{
+    top: 600px;
+    background-color: darkblue;
+    animation: ani5 1s infinite alternate ease-in-out;
+
+    z-index: 1;  
+}
+
+@keyframes ani4{
+    from{
+        clip-path: polygon(36% 34%, 58% 37%, 74% 28%, 86% 16%, 100% 0, 100% 100%, 0 100%, 0 24%, 11% 19%, 24% 23%);
+    }
+    to{
+        clip-path: polygon(40% 24%, 59% 6%, 74% 6%, 86% 17%, 100% 37%, 100% 100%, 0 100%, 0 22%, 12% 31%, 25% 29%);
+    }
+}
+
+@keyframes ani5{
+    from{
+        clip-path: polygon(39% 15%, 59% 34%, 72% 38%, 90% 22%, 100% 0, 100% 100%, 0 100%, 0 30%, 10% 14%, 23% 6%);
+    }
+    to{
+        clip-path: polygon(36% 41%, 57% 24%, 72% 11%, 86% 11%, 100% 20%, 100% 100%, 0 100%, 0 7%, 11% 17%, 22% 35%);
+    }
+}
+
+#sea{
+    top: 700px;
+    height: 300px;
+    background-color: darkblue;
+
+    z-index: 1;
+}
+
+#c1{
+    transform: scale(80%);
+    top: -50px;
+    left: -200px;
+}
+
+#c2{
+    transform: scale(80%);
+    top: 30px;
+    right: -50px;
+}
+
+#c3{
+    transform: scale(80%);
+    top: 100px;
+    right: 250px;
+}
+
+#seabrid{
+    transform: scale(80%);
+    top: -90px;
+    right: 100px;
+}
+
+
+.box{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+hr{
+    width: 95%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    height: 80vh;
+}
+
+header > h1{
+    position: relative;
+    top: 300px;
+    left: 7%;
+    font-size: 8rem;
+    font-weight: 900;
+
+    color: white;
+    text-shadow: 3px 10px 1px rgba(0, 0, 255, 0.3);
+    /* z-index: 3; */
+}
+
+#mainBox *{
+    box-sizing: border-box;
+    color: wheat;
+    z-index: 2;
+}
+
+#mainBox{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+#side{
+    padding: 20px;
+}
+
+#side .card{
+    padding: 20px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#side .card > span{
+    font-size: 2.5rem;
+    font-weight: 550;
+    margin-bottom: 30%;
+}
+
+#side .card > ul{
+    display: grid;
+    grid-template-columns: 1fr;
+
+    font-size: 1.5rem;
+
+    grid-row-gap: 30px;
+}
+
+section{
+    background-color: darkblue;
+    padding-bottom: 200px;
+    z-index: 3;
+}
+
+#contents{
+    display: grid;
+    grid-template-columns: 1fr;
+
+    grid-row-gap: 20px;
+    padding: 20px;
+
+}
+
+.content h1, .content p{
+    margin: 8px 0;
+}
+
+.content h1{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.card{
+    width: 90%;
+    height: 100%;
+    position: relative;
+
+    padding: 20px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 10px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-left: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+footer{
+    display: inline-block;
+
+    width: 100%;
+    height: 150px;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2;
+
+    background-color: rgba(0, 0, 0, 1);
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+
+    color: white;
+}
+
+footer>ul{
+    display: flex;
+}
+
+footer li{
+    margin: 20px;
+}
+
+@media (max-width: 900px) {
+    
+    #mainBox{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #side span{
+        display: none;
+    }
+
+    #side .card{
+        padding: 0;
+    }
+
+    #side .card>ul{
+        display: flex;
+    }
+
+    #side .card>ul>li{
+        margin: 20px;
+    }
+}
+
+

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./page2.css">
+</head>
+<body>
+
+    <div id="sky"></div>
+    <img class="absolute" id="c1" src="./img/구름작은거.png" alt="">
+    <img class="absolute" id="c2" src="./img/구름큰거.png" alt="">
+    <img class="absolute" id="c3" src="./img/일반구름.png" alt="">
+    <img class="absolute" id="seabrid" src="./img/갈메기.png" alt="">
+
+    <div class="absolute sea" id="s1"></div>
+    <div class="absolute sea" id="s2"></div>
+    <div class="absolute sea" id="s3"></div>
+    <div class="absolute sea" id="s4"></div>
+    <div class="absolute sea" id="s5"></div>
+    <div class="absolute sea" id="sea"></div>
+
+    <div class="absolute light" id="l1"></div>
+    <div class="absolute light" id="l2"></div>
+    <div class="absolute light" id="l3"></div>
+
+    <header>
+        <h1 id="title">Tietle</h1>
+    </header>
+
+    <hr>
+
+    <section id="mainBox" class="box">
+
+        <aside id="side" class="box">
+            <div class="box">
+                <div  class="card">
+                    <span>menu</span>
+                    <ul>
+                        <li><a href="">menu1</a></li>
+                        <li><a href="">menu2</a></li>
+                        <li><a href="">menu3</a></li>
+                        <li><a href="">menu4</a></li>
+                        <li><a href="">menu5</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <article id="contents" class="box">
+            <div class="box">
+                <div class="content card">
+                    <h1>title1</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea voluptatum voluptas asperiores quae error, nisi tempora vel maiores perspiciatis exercitationem, pariatur rem eius vitae debitis excepturi! Nisi labore voluptatum rerum?</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content card">
+                    <h1>title1</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea voluptatum voluptas asperiores quae error, nisi tempora vel maiores perspiciatis exercitationem, pariatur rem eius vitae debitis excepturi! Nisi labore voluptatum rerum?</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content card">
+                    <h1>title1</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea voluptatum voluptas asperiores quae error, nisi tempora vel maiores perspiciatis exercitationem, pariatur rem eius vitae debitis excepturi! Nisi labore voluptatum rerum?</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content card">
+                    <h1>title1</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea voluptatum voluptas asperiores quae error, nisi tempora vel maiores perspiciatis exercitationem, pariatur rem eius vitae debitis excepturi! Nisi labore voluptatum rerum?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas harum aliquam et inventore aut tempore cum, illo quo impedit itaque nisi temporibus maxime porro quisquam reprehenderit modi atque magni odio.</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique velit facere nesciunt aperiam. Possimus, harum earum distinctio, mollitia ducimus et vitae, porro facilis ipsam perferendis ipsa ad qui minima dignissimos?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ea error, at ab a laudantium, tenetur maiores enim necessitatibus vero delectus laborum alias nisi consectetur esse corrupti in eligendi deleniti!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium praesentium sunt ea quae quisquam fugit, consequuntur corporis quibusdam sint perferendis hic ad porro facere sit iste molestias ullam reprehenderit id.</p>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+    <footer>
+        <ul>
+            <li><p>content</p></li>
+            <li><p>|</p></li>
+            <li><p>content</p></li>
+            <li><p>|</p></li>
+            <li><p>content</p></li>
+        </ul>
+    </footer>
+    
+</body>
+
+<script>
+
+    window.addEventListener("scroll", scrolldown);
+
+    function scrolldown(){
+
+        // console.log(window.scrollX);
+        // window.scrollX = 0;
+
+        let vlaue = window.scrollY;
+
+        c1.style.left = `${-200-vlaue}px`;
+        c2.style.right = `${-50-vlaue}px`;
+        c3.style.right = `${250-vlaue*0.8}px`;
+        seabrid.style.right = `${250+vlaue}px`;
+        seabrid.style.transform = `scale(${80+vlaue*0.3}%)`;
+
+        title.style.top = `${300+vlaue}px`;
+
+        l1.style.transform = `translate(${100+vlaue*5}px) perspective(200px) rotate(${60-vlaue*0.2}deg) rotateY(-30deg)`;
+        l2.style.transform = `translate(${-50-vlaue*5}px) perspective(200px) rotate(${90+vlaue*0.2}deg) rotateY(-30deg)`;
+        l3.style.transform = `translate(${150+vlaue*5}px) perspective(200px) rotate(${40-vlaue*0.2}deg) rotateY(-30deg)`;
+
+        if(vlaue>450){
+            document.querySelectorAll('.light').forEach( element => {
+
+                element.style.opacity = '0%';
+
+                setTimeout(() =>{
+                    element.style.display = 'none';
+                },800);
+
+                window.removeEventListener("scroll", scrolldown);
+                window.addEventListener("scroll", scrollup);
+            })
+        }
+    }
+
+    function scrollup(){
+
+        // window.scrollX = 0;
+
+        let vlaue = window.scrollY;
+
+        c1.style.left = `${-200-vlaue}px`;
+        c2.style.right = `${-50-vlaue}px`;
+        c3.style.right = `${250-vlaue*0.8}px`;
+        seabrid.style.right = `${250+vlaue}px`;
+        seabrid.style.transform = `scale(${80+vlaue*0.3}%)`;
+
+        title.style.top = `${300+vlaue}px`;
+
+        l1.style.transform = `translate(${100+vlaue*5}px) perspective(200px) rotate(${60-vlaue*0.2}deg) rotateY(-30deg)`;
+        l2.style.transform = `translate(${-50-vlaue*5}px) perspective(200px) rotate(${90+vlaue*0.2}deg) rotateY(-30deg)`;
+        l3.style.transform = `translate(${150+vlaue*5}px) perspective(200px) rotate(${40-vlaue*0.2}deg) rotateY(-30deg)`;
+        
+        if(vlaue<450){
+            document.querySelectorAll('.light').forEach( element => {
+
+                element.style.display = 'block';
+                
+                setTimeout(() =>{
+                    element.style.opacity = '80%'; 
+                },500);
+
+                window.removeEventListener("scroll", scrollup);
+                window.addEventListener("scroll", scrolldown);
+            })
+        }
+    }
+
+</script>
+
+</html>
